@@ -1,7 +1,10 @@
 import "./App.css";
+import Table from "./Test";
 
 function App() {
-  return <></>;
+  return <>
+  <Table/>
+  </>;
 }
 
 export default App;
