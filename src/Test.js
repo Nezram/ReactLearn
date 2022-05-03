@@ -19,10 +19,10 @@ class Table extends React.Component {
     const txt = [
       `Привет`,
       `Hello`,
-      `World`,
+      `человеческая мысль; в общем плане связная и полная последовательность символов.`,
       `English`,
       `bad`,
-      `Poland`,
+      `человеческая мысль; в общем плане связная и полная последовательность символов.`,
       `Japan`,
       `Russia`,
       `Kitten`,
@@ -38,9 +38,21 @@ class Table extends React.Component {
         <input type="text" onChange={this.textChange} />
         <ul>
           {txt.map((element, index) => {
-            if (this.state.text == element) {
-              return <li>{element}</li>;
-            } else if (this.state.text == ``) {
+            if (element.includes(this.state.text)) {
+              let x = element.split(``);
+              let y = x.findIndex((e) => e === this.state.text);
+              console.log(y);
+              x[y] = (
+                <span
+                  style={{
+                    background: `blue`,
+                  }}
+                >
+                  {x[y]}
+                </span>
+              );
+              return <li>{x}</li>;
+            } else if (this.state.text === ``) {
               return <li>{element}</li>;
             }
           })}
