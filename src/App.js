@@ -1,9 +1,10 @@
 import "./App.css";
-import Table from "./Test";
+import Calc_table from "./Calc_table";
+
 
 function App() {
   return <>
-  <Table/>
+  <Calc_table/>
   </>;
 }
 
