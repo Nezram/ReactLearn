@@ -1,10 +1,11 @@
 import "./App.css";
-import Calc_table from "./Calc_table";
+import Blog from "./Blog";
+
 
 
 function App() {
   return <>
-  <Calc_table/>
+  <Blog/>
   </>;
 }
 

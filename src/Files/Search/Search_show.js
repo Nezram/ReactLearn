@@ -19,19 +19,13 @@ function ShowTable(props) {
     `Bottle`,
     `mouse`,
   ];
-  function t() {
-    return {__html:<span className="findtext">{props.text}</span>}
-  }
 
   return (
     <ul>
       {txt.map((e) => {
-        if (e.includes(props.text,)) {
-          return (
-            <li>
-              {e.replace(props.text,dangerouslySetInnerHTML={t()} )}
-            </li>
-          );
+        if (e.includes(props.text)) {
+          let col = e.replace(props.text, `<span>${props.text}</span>`)
+          return <li dangerouslySetInnerHTML={{__html:col}}/>;
         }
       })}
     </ul>
