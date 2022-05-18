@@ -4,9 +4,9 @@ import { Button } from "react-bootstrap";
 export default function AddTodo(props) {
   return (
     <div>
-      <input onChange={(e) => props.onSetText(e)} type="text" />
+      <input onChange={(e) => props.onSetText(e)} type="text" placeholder="Enter you quest" />
       <Button variant="primary" onClick={() => props.onAdd()}>
-        Primary
+        Add
       </Button>{" "}
     </div>
   );
