@@ -1,13 +1,12 @@
 import "./App.css";
-import News from "./lesson";
-
-
-
+import DayAndNight from "./react_context";
 
 function App() {
-  return <>
-  <News/>
-  </>;
+  return (
+    <>
+      <DayAndNight />
+    </>
+  );
 }
 
 export default App;
