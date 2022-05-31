@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import ShowDayAndNight from "./react_context__container";
+import MyContext from "./context";
+
+
 
 export default function DayAndNight() {
   const [day, setDay] = useState({
@@ -10,12 +14,15 @@ export default function DayAndNight() {
     sun_night: "sun sun_night",
   });
 
-  const [flag, setFlag] = useState(true)
+  const [flag, setFlag] = useState(true);
+
+  function setDayOrNight() {
+    setFlag(flag ? false : true);
+  }
 
   return (
-    <div className={flag ? day.cont : night.cont}>
-      <div className={flag ? day.sun_day : night.sun_night}></div>
-      <input type="button" onClick={()=>setFlag(flag ? false : true)} className="but" value={flag ? "night" : "day"} />
-    </div>
+    <MyContext.Provider value={{setDayOrNight, flag}}>
+      <ShowDayAndNight day={day} night={night} flag={flag} />
+    </MyContext.Provider>
   );
 }
