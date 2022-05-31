@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ShowDayAndNight from "./react_context__container";
 import MyContext from "./context";
+import "./style.css"
 
 
 

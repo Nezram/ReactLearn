@@ -1,0 +1,34 @@
+.container {
+    width: 800px;
+    height: 800px;
+    border: 4px solid blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  
+  }
+  
+  .container_day {
+    background: rgb(12, 141, 228);
+  }
+  
+  .container_night {
+    background: rgb(62, 5, 116);
+  }
+  
+  .sun {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .sun_day{
+    background: yellow;
+  }
+  
+  .sun_night {
+    background: grey;
+  }
+  
+  
