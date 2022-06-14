@@ -1,10 +1,11 @@
 import "./App.css";
-import DayAndNight from "./Files/react_context/react_context";
+import ShowSlider from "./slider";
+;
 
 function App() {
   return (
     <>
-      <DayAndNight />
+      <ShowSlider />
     </>
   );
 }
