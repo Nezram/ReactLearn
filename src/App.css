@@ -1,0 +1,9 @@
+:root {
+    --star-size: 60px;
+    --star-color: #fff;
+    --star-background: yellow;
+}
+.Star {
+    --percent: calc(var(--rating)/ 5* 100%)
+}
+
